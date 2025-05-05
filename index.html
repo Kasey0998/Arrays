@@ -1,1 +1,30 @@
-html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    let f4=(a,b,l)=>{
+        let sum= 0 ;
+       l=l.split(",");
+       for(i=0; i< l.length; i++){
+        if(parseInt(l[i]) % a == 0 || parseInt(l[i]) % b == 0){
+            sum+=parseInt(l[i]);
+        }
+       }
+       alert("The sum is :"+ sum)
+    }
+</script>
+</head>
+<body>
+    A
+    <input type="text" id="a">
+<br>
+B
+    <input type="text" id="b">
+<br>
+    L
+    <input type="text" id="l">    <button type="button" onclick="f4(parseInt(document.getElementById('a').value),parseInt(document.getElementById('b').value),document.getElementById('l').value)">submit</button>
+</body>
+</html>
