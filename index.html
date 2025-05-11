@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 <script>
-    let f4=(a,b,l)=>{
+    let f4=()=>{
+        let i,a,b,l;
+        a=parseInt(document.getElementById('a').value); 
+        b=parseInt(document.getElementById('b').value); 
+        l=document.getElementById('l').value;
         let sum= 0 ;
        l=l.split(",");
        for(i=0; i< l.length; i++){
@@ -13,8 +17,14 @@
             sum+=parseInt(l[i]);
         }
        }
-       alert("The sum is :"+ sum)
+       return sum;
     }
+
+    let f5=()=>{
+        a=f4()
+        alert("The sum is "+a)
+    }
+
 </script>
 </head>
 <body>
@@ -25,6 +35,6 @@ B
     <input type="text" id="b">
 <br>
     L
-    <input type="text" id="l">    <button type="button" onclick="f4(parseInt(document.getElementById('a').value),parseInt(document.getElementById('b').value),document.getElementById('l').value)">submit</button>
+    <input type="text" id="l">    <button type="button" onclick="f5()">submit</button>
 </body>
 </html>
