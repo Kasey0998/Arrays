@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Javascript
+</body>
+<script>
+    let f7=(basket,prices)=>{
+            for(item in basket){
+                for(rate in prices){
+                    
+                    console.log(basket[item])
+                    console.log(prices[rate])
+
+                }
+            }
+    }
+    let products=()=>{
+        let basket={rice: 1, potato: 5, tomato: 4, bread: 1}
+        let price={rice:10, potato: 15, tomato: 12, bread: 2}
+        f7(basket,price)
+    }
+
+</script>
+</html>

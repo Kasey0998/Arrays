@@ -6,16 +6,18 @@
     <title>Document</title>
 <script>
     let f4=()=>{
-        let i,a,b,l;
-        a=parseInt(document.getElementById('a').value); 
-        b=parseInt(document.getElementById('b').value); 
+        let i,a,j,l;
+        a=document.getElementById('a').value;
+        a=a.split(",");
         l=document.getElementById('l').value;
         let sum= 0 ;
        l=l.split(",");
        for(i=0; i< l.length; i++){
-        if(parseInt(l[i]) % a == 0 || parseInt(l[i]) % b == 0){
+        for( j=0;j<a.length;j++){
+        if(parseInt(l[i]) % a[j] == 0){
             sum+=parseInt(l[i]);
         }
+    }
        }
        return sum;
     }
@@ -30,9 +32,6 @@
 <body>
     A
     <input type="text" id="a">
-<br>
-B
-    <input type="text" id="b">
 <br>
     L
     <input type="text" id="l">    <button type="button" onclick="f5()">submit</button>
